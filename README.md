@@ -7,7 +7,7 @@
 │   ├── pageObject/                    # Page Objects (POM)
 │   │   ├── mainPage/                  # Main page
 │   │   └── careersPage/               # Careers pages
-│   │       ├── qualityAssurancePage/   # QA page
+│   │       ├── qualityAssurancePage/  # QA page
 │   │       └── openPositionsPage/     # Open Positions page
 │   └── api/                           # API service classes
 │       └── PetApi.java
@@ -24,7 +24,7 @@
 
 - Java 17
 - Gradle 
-- Selenide 
+- Selenide (Selenium-based wrapper)
 - JUnit 5
 - Rest-Assured
 - Allure Reports
