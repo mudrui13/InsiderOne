@@ -1,4 +1,4 @@
-package tests.mainPage;
+package tests.main;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Epic;
@@ -22,5 +22,4 @@ public class MainPageBlocks extends TestClasses {
                 .verifyHeaderMenu()
                 .verifyHeroSection();
     }
-
 }
