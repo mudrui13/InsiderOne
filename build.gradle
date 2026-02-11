@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.11.2'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+def allureVersion = '2.29.1'
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    implementation 'com.codeborne:selenide:7.7.3'
+    implementation 'io.rest-assured:rest-assured:5.5.1'
+    implementation 'org.aeonbits.owner:owner:1.0.12'
+    testImplementation "io.qameta.allure:allure-selenide:${allureVersion}"
+    testImplementation "io.qameta.allure:allure-rest-assured:${allureVersion}"
+}
+
+test {
+    useJUnitPlatform()
+    systemProperty 'browser', project.findProperty('browser') ?: 'chrome'
+}
